@@ -13,7 +13,7 @@ public class PhraseAccountConfiguration {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "api-key", nullable = false)
+    @Column(name = "api-key")
     private String apiKey;
 
     public void setId(Long id) {
