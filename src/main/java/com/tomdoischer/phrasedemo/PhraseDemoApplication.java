@@ -9,5 +9,4 @@ public class PhraseDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PhraseDemoApplication.class, args);
 	}
-
 }
