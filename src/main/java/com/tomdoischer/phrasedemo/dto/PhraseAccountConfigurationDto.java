@@ -4,6 +4,7 @@ public class PhraseAccountConfigurationDto {
     private Long id;
     private String username;
     private String password;
+    private String apiKey;
 
     public Long getId() {
         return id;
@@ -27,5 +28,13 @@ public class PhraseAccountConfigurationDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
     }
 }

@@ -13,6 +13,9 @@ public class PhraseAccountConfiguration {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "api-key", nullable = false)
+    private String apiKey;
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -35,5 +38,13 @@ public class PhraseAccountConfiguration {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
     }
 }
