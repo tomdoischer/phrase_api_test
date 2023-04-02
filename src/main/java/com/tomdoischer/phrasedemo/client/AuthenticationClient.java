@@ -11,14 +11,17 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 import reactor.netty.http.client.HttpClient;
-
-import java.util.Optional;
 
 @Service
 public class AuthenticationClient {
 
+    /**
+     * Authenticate a user and get their API key.
+     *
+     * @param accountConfiguration
+     * @return
+     */
     public String getApiKey(PhraseAccountConfiguration accountConfiguration) {
         WebClient client = WebClient.builder()
                 .baseUrl("https://cloud.memsource.com/web/api2/v1")
@@ -38,6 +41,13 @@ public class AuthenticationClient {
         return getApiKeyFromJson(response);
     }
 
+    /**
+     * Parse the JSON response and get the API key value.
+     *
+     * @param response
+     * @return
+     * @throws JsonSyntaxException
+     */
     private String getApiKeyFromJson(String response) throws JsonSyntaxException {
         Gson gson = new Gson();
         JsonObject jsonObject = gson.fromJson(response, JsonObject.class);

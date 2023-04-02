@@ -6,11 +6,14 @@ import com.tomdoischer.phrasedemo.service.PhraseAccountConfigurationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.expression.ParseException;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * The controller for operation with Phrase account configuration.
+ */
 @RestController
 @RequestMapping("/account-configurations")
+@CrossOrigin(origins = "*")
 public class PhraseAccountConfigurationController {
 
     private final ModelMapper modelMapper;
@@ -37,7 +40,7 @@ public class PhraseAccountConfigurationController {
     }
 
     @GetMapping
-    public PhraseAccountConfigurationDto getAccountConfigurationByUsername(@RequestParam(value="username") String username) {
+    public PhraseAccountConfigurationDto getAccountConfigurationByUsername(@RequestParam(value = "username") String username) {
         return convertToDto(accountConfigurationService.getByUsername(username));
     }
 

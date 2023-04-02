@@ -3,10 +3,9 @@ package com.tomdoischer.phrasedemo.pojo;
 import java.util.List;
 
 /**
- * Name, status, source language and target languages should be displayed
- *
+ * Object used to parse the JSON response in {@link com.tomdoischer.phrasedemo.client.ProjectListingClient}.
  */
-public class ProjectPojo {
+public class PhraseProjectPojo {
     private String name;
     private String status;
     private String sourceLang;

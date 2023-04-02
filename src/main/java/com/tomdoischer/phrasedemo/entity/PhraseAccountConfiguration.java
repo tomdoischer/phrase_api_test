@@ -8,7 +8,7 @@ public class PhraseAccountConfiguration {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name="username", nullable=false, unique=true)
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
     @Column(name = "password", nullable = false)
     private String password;
@@ -16,12 +16,12 @@ public class PhraseAccountConfiguration {
     @Column(name = "api-key")
     private String apiKey;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
