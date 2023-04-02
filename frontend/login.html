@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Phrase account management</title>
+</head>
+
+<body>
+    <div id="top-panel">
+        <ul>
+            <li><a href="login.html">Account management</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </div>
+    </br>
+    </br>
+    <div class="main--container">
+        <h3 id="welcome-header"></h3>
+        <div>
+            <div id="form-body">
+                <h2>Log in to you Phrase account</h2>
+                <form id="form" action="script.js">
+                    <div class="input-group">
+                        <div class="">
+                            <input type="text" id="username" placeholder="Username" />
+                            <input type="password" id="password" placeholder="Password" />
+                            <input type="submit" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="change-account" style="display: none;">
+                <form id="change-account-form" action="script.js">
+                    <div>
+                        <div>
+                            <h3>Login as another account</h3>
+                            <input type="text" id="change-account-username" placeholder="Username" />
+                            <input type="password" id="change-account-password" placeholder="Password" />
+                            <input type="submit" placeholder="Change account" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <p id="loggedInAs"></p>
+            </div>
+            <button type="button" onclick="editAccountClicked()" id="edit-account" style="display: none;">Edit
+                account</button>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
